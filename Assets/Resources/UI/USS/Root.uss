@@ -7,84 +7,102 @@
     font-size: 14px;
 }
 
-/* ── Top Bar ─────────────────────────────────────── */
-.top-bar {
-    height: 52px;
+/* ── Side Bar ─────────────────────────────────────────── */
+.side-bar {
+    width: 180px;
     background-color: #1a1a1a;
-    border-bottom-width: 1px;
-    border-bottom-color: #2a2a2a;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 12px;
-    padding-right: 12px;
+    border-right-width: 1px;
+    border-right-color: #2a2a2a;
+    flex-direction: column;
+    padding: 10px;
     flex-shrink: 0;
 }
 
-.resource-chip {
+.resource-sidebar-scroll {
+    flex-grow: 1;
+}
+
+/* Internal container of the scroll view */
+.resource-sidebar-scroll #unity-content-container {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.resource-chip {
+    flex-direction: column;
     align-items: center;
     background-color: #252525;
-    border-radius: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    margin-right: 8px;
+    border-radius: 12px;
+    padding: 8px 2px;
+    margin-bottom: 10px;
+    width: 47%;
     border-width: 1px;
     border-color: #333333;
+    transition-duration: 0.1s;
+}
+
+.resource-chip:hover {
+    background-color: #2a2a2a;
+    border-color: #4CAF50;
+    scale: 1.02;
+}
+
+.resource-chip:active {
+    scale: 0.95;
+    background-color: #222222;
 }
 
 .resource-chip-icon {
-    font-size: 14px;
-    margin-right: 4px;
+    font-size: 20px;
+    margin-bottom: 4px;
 }
 
 .resource-chip-label {
     font-size: 13px;
-    color: #e0e0e0;
+    color: #ffffff;
     -unity-font-style: bold;
+    -unity-text-align: middle-center;
 }
 
-.debug-reset-btn {
-    position: absolute;
-    right: 12px;
+.debug-reset-btn-sidebar {
     background-color: #3a1a1a;
     border-color: #6b2b2b;
     border-width: 1px;
     border-radius: 6px;
     color: #ff6b6b;
-    font-size: 11px;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    font-size: 10px;
+    padding: 6px 2px;
+    margin-top: 10px;
 }
 
-.debug-reset-btn:hover {
+.debug-reset-btn-sidebar:hover {
     background-color: #4a2020;
 }
 
-/* ── Center Area ─────────────────────────────────── */
+.map-btn-sidebar {
+    background-color: #ff9800;
+    border-color: #e68a00;
+    border-width: 1px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 12px;
+    -unity-font-style: bold;
+    padding: 10px 2px;
+    margin-top: 10px;
+    transition-duration: 0.2s;
+}
+
+.map-btn-sidebar:hover {
+    scale: 1.05;
+    background-color: #ffa726;
+}
+
+/* ── Center Area ─────────────────────────────────────────── */
 .center-area {
     flex-grow: 1;
     background-color: #121212;
     flex-shrink: 1;
-}
-
-/* ── Bottom Bar ──────────────────────────────────── */
-.bottom-bar {
-    height: auto;
-    min-height: 140px;
-    max-height: 160px;
-    background-color: #1a1a1a;
-    border-top-width: 1px;
-    border-top-color: #2a2a2a;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    flex-shrink: 0;
-    overflow: hidden;
 }
 
 /* ── Overlay ─────────────────────────────────────── */

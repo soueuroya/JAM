@@ -24,6 +24,31 @@
       "id": "tools",
       "displayName": "Tools",
       "category": "advanced"
+    },
+    {
+      "id": "ship",
+      "displayName": "Ship",
+      "category": "special"
+    },
+    {
+      "id": "oil",
+      "displayName": "Oil",
+      "category": "raw"
+    },
+    {
+      "id": "fuel",
+      "displayName": "Fuel",
+      "category": "processed"
+    },
+    {
+      "id": "steel",
+      "displayName": "Steel",
+      "category": "advanced"
+    },
+    {
+      "id": "machines",
+      "displayName": "Machines",
+      "category": "exotic"
     }
   ]
 }

@@ -62,6 +62,8 @@ namespace JAM.UI
             _actionBtn.RegisterCallback<MouseUpEvent>(_ => TryTap());
             _actionBtn.RegisterCallback<PointerUpEvent>(_ => TryTap());
 
+            GameManager.Instance.ResourceSystem.OnGlobalReset += OnGlobalReset;
+
             _prodBarBg.style.display = DisplayStyle.None;  // no prod bar for nodes
         }
 
@@ -80,6 +82,8 @@ namespace JAM.UI
             UpdateBuildingSub();
             _actionBtn.RegisterCallback<MouseUpEvent>(_ => OnBuildingAction());
             _actionBtn.RegisterCallback<PointerUpEvent>(_ => OnBuildingAction());
+
+            GameManager.Instance.ResourceSystem.OnGlobalReset += OnGlobalReset;
 
             // Subscribe to production events
             GameManager.Instance.ProductionSystem.OnProductionProgress += OnProductionProgress;
@@ -303,6 +307,17 @@ namespace JAM.UI
             _gameRow.style.borderLeftColor   = c;
         }
 
+        private void OnGlobalReset()
+        {
+            if (_type == RowType.Building)
+            {
+                _isUnlocked = false;
+                RefreshActionBtn();
+                UpdateBuildingSub();
+            }
+            RefreshWorkerUI();
+        }
+
         private static string Cap(string s) =>
             string.IsNullOrEmpty(s) ? s
             : char.ToUpper(s[0]) + s.Substring(1).Replace("_", " ");
@@ -311,8 +326,10 @@ namespace JAM.UI
         {
             if (GameManager.Instance?.WorkerSystem != null)
                 GameManager.Instance.WorkerSystem.OnWorkerChanged -= OnWorkerChanged;
-            if (GameManager.Instance?.ProductionSystem != null)
+            if (GameManager.Instance?.ResourceSystem != null)
             {
+                //GameManager.Instance.ResourceSystem.OnResourceChanged -= OnResourceChanged;
+                GameManager.Instance.ResourceSystem.OnGlobalReset    -= OnGlobalReset;
                 GameManager.Instance.ProductionSystem.OnProductionProgress -= OnProductionProgress;
                 GameManager.Instance.ProductionSystem.OnProductionComplete  -= OnProductionComplete;
             }

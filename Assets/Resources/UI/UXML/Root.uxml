@@ -2,19 +2,24 @@
     <Style src="project:/Assets/Resources/UI/USS/ResourceNode.uss" />
     <Style src="project:/Assets/Resources/UI/USS/Root.uss" />
     <ui:VisualElement name="RootContainer" class="root-container">
-        <!-- Top Bar -->
-        <ui:VisualElement name="TopBar" class="top-bar">
-            <ui:Label name="ResourceLabel" text="RESOURCES" class="accent-green" />
-        </ui:VisualElement>
+        <!-- Main Layout -->
+        <ui:VisualElement name="MainLayout" style="flex-grow: 1; flex-direction: row;">
+            
+            <!-- Left Side Bar (Resources) -->
+            <ui:VisualElement name="SideBar" class="side-bar">
+                <ui:ScrollView name="ResourceScroll" class="resource-sidebar-scroll" 
+                               vertical-scroller-visibility="Hidden" />
+                
+                <!-- Map Button (Hidden by default) -->
+                <ui:Button name="MapBtn" text="🗺 MAP" class="map-btn-sidebar" style="display: none;" />
 
-        <!-- Center Area (Gameplay) -->
-        <ui:VisualElement name="CenterArea" class="center-area">
-            <ui:Label name="PlaceholderLabel" text="GAMEPLAY AREA" style="flex-grow: 1; -unity-text-align: middle-center; opacity: 0.5; font-size: 20px;" />
-        </ui:VisualElement>
+                <!-- Reset button at the bottom of sidebar -->
+                <ui:Button name="ResetBtn" text="⟳ RESET" class="debug-reset-btn-sidebar" />
+            </ui:VisualElement>
 
-        <!-- Bottom Bar (Actions) -->
-        <ui:VisualElement name="BottomBar" class="bottom-bar">
-            <ui:Label name="ActionsLabel" text="ACTION BAR" class="accent-orange" />
+            <!-- Center Area (Gameplay) -->
+            <ui:VisualElement name="CenterArea" class="center-area" />
+
         </ui:VisualElement>
 
         <!-- Overlay Layer for Popups -->

@@ -9,6 +9,7 @@ namespace JAM.Systems
         private Dictionary<string, float> _resources = new Dictionary<string, float>();
 
         public event Action<string, float> OnResourceChanged;
+        public event Action OnGlobalReset;
 
         public void AddResource(string id, float amount)
         {
@@ -54,6 +55,7 @@ namespace JAM.Systems
                 _resources[key] = 0;
                 OnResourceChanged?.Invoke(key, 0);
             }
+            OnGlobalReset?.Invoke();
             Debug.Log("[ResourceSystem] All resources reset to 0.");
         }
 

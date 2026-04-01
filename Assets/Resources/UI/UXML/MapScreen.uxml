@@ -1,0 +1,48 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project:/Assets/Resources/UI/USS/MapScreen.uss" />
+
+    <!-- Full-screen dimming backdrop -->
+    <ui:VisualElement name="MapBackdrop" class="map-backdrop">
+
+        <!-- Centred panel -->
+        <ui:VisualElement name="MapPanel" class="map-panel">
+
+            <!-- Header -->
+            <ui:VisualElement class="map-header">
+                <ui:Label text="🗺  WORLD MAP" class="map-title" />
+                <ui:Button name="CloseBtn" text="✕" class="map-close-btn" />
+            </ui:VisualElement>
+
+            <!-- Island cards row -->
+            <ui:VisualElement class="map-islands-row">
+
+                <!-- Island 1 — always active -->
+                <ui:VisualElement name="Island1Card" class="island-card island-card--active">
+                    <ui:Label text="🌲" class="island-emoji" />
+                    <ui:Label text="FOREST ISLAND" class="island-name" />
+                    <ui:Label text="Island 1" class="island-number" />
+                    <ui:Label text="✓ CURRENT" class="island-status island-status--active" />
+                    <ui:Label text="Logs · Iron Ore · Planks" class="island-resources" />
+                </ui:VisualElement>
+
+                <ui:Label text="→" class="map-arrow" />
+
+                <!-- Island 2 — locked until ship built -->
+                <ui:VisualElement name="Island2Card" class="island-card island-card--locked">
+                    <ui:Label text="🛢" class="island-emoji" />
+                    <ui:Label text="OIL ISLAND" class="island-name" />
+                    <ui:Label text="Island 2" class="island-number" />
+                    <ui:Label name="Island2Status" text="🔒 LOCKED" class="island-status island-status--locked" />
+                    <ui:Label name="Island2Req" text="Requires: 1× Ship" class="island-requirement" />
+                    <ui:Label name="Island2Res" text="Oil · Fuel · Barrels" class="island-resources" style="display: none;" />
+                </ui:VisualElement>
+
+            </ui:VisualElement>
+
+            <!-- Unlock button -->
+            <ui:Button name="UnlockBtn" text="⛵  SAIL TO ISLAND 2" class="map-unlock-btn map-unlock-btn--disabled" />
+            <ui:Label name="HintLabel" text="Build 1 Ship at the Shipyard first" class="map-hint" />
+
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

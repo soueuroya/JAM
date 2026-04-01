@@ -33,6 +33,54 @@
       },
       "duration": 15.0,
       "type": "factory"
+    },
+    {
+      "id": "shipyard",
+      "input": {
+        "planks": 10.0,
+        "iron_bars": 5.0,
+        "tools": 3.0
+      },
+      "output": {
+        "ship": 1.0
+      },
+      "duration": 30.0,
+      "type": "factory"
+    },
+    {
+      "id": "refinery",
+      "input": {
+        "oil": 3.0
+      },
+      "output": {
+        "fuel": 1.0
+      },
+      "duration": 3.0,
+      "type": "factory"
+    },
+    {
+      "id": "foundry",
+      "input": {
+        "iron_bars": 3.0,
+        "fuel": 1.0
+      },
+      "output": {
+        "steel": 1.0
+      },
+      "duration": 4.0,
+      "type": "factory"
+    },
+    {
+      "id": "workshop",
+      "input": {
+        "steel": 2.0,
+        "tools": 1.0
+      },
+      "output": {
+        "machines": 1.0
+      },
+      "duration": 5.0,
+      "type": "factory"
     }
   ]
 }

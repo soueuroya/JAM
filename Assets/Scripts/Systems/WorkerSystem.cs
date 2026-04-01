@@ -58,6 +58,16 @@ namespace JAM.Systems
             OnWorkerChanged?.Invoke(workerId, state.Level);
         }
 
+        public void ResetAllWorkers()
+        {
+            foreach (var kv in _data)
+            {
+                _states[kv.Key] = new WorkerState { Level = 0, Timer = kv.Value.interval };
+                OnWorkerChanged?.Invoke(kv.Key, 0);
+            }
+            Debug.Log("[WorkerSystem] All workers reset to level 0.");
+        }
+
         public int GetLevel(string workerId) =>
             _states.TryGetValue(workerId, out var s) ? s.Level : 0;
 

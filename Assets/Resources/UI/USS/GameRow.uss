@@ -4,14 +4,19 @@
     border-radius: 10px;
     border-width: 1px;
     border-color: #2a2a2a;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    margin-left: 10px;
-    margin-right: 10px;
     padding: 12px 14px;
     flex-direction: column;
+    flex-grow: 1;
     transition-property: background-color, border-color;
     transition-duration: 0.1s;
+}
+
+.game-row-item {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    min-width: 300px;
+    margin: 6px;
 }
 
 .game-row--locked {

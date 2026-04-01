@@ -239,6 +239,17 @@ namespace JAM.UI
 
             _mainScroll = new ScrollView(ScrollViewMode.Vertical);
             _mainScroll.style.flexGrow = 1;
+            
+            // Set up grid container
+            var content = _mainScroll.contentContainer;
+            content.style.flexDirection = FlexDirection.Row;
+            content.style.flexWrap      = Wrap.Wrap;
+            content.style.alignItems    = Align.FlexStart; // Only expand width, not height
+            content.style.paddingTop    = 6;
+            content.style.paddingBottom = 6;
+            content.style.paddingLeft   = 6;
+            content.style.paddingRight  = 6;
+
             _mainScroll.verticalScrollerVisibility   = ScrollerVisibility.Hidden;
             _mainScroll.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             _mainScroll.AddManipulator(new MouseDragScroll());
@@ -252,6 +263,7 @@ namespace JAM.UI
             foreach (var (title, icon, resourceId, workerId, buildingId, isTier2) in Rows)
             {
                 var rowTemplateContainer = _gameRowTemplate.Instantiate();
+                rowTemplateContainer.AddToClassList("game-row-item");
                 var rowEl = rowTemplateContainer.Q<VisualElement>("GameRow");
                 _mainScroll.Add(rowTemplateContainer);
 

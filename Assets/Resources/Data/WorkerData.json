@@ -1,0 +1,49 @@
+{
+  "workers": [
+    {
+      "id": "lumberjack",
+      "displayName": "Lumberjack",
+      "icon": "🪓",
+      "resourceId": "logs",
+      "baseRate": 2.0,
+      "scalingFactor": 1.5,
+      "interval": 5.0
+    },
+    {
+      "id": "miner",
+      "displayName": "Miner",
+      "icon": "⛏",
+      "resourceId": "iron_ore",
+      "baseRate": 1.0,
+      "scalingFactor": 1.5,
+      "interval": 8.0
+    },
+    {
+      "id": "carpenter",
+      "displayName": "Carpenter",
+      "icon": "🪚",
+      "resourceId": "planks",
+      "baseRate": 1.0,
+      "scalingFactor": 1.3,
+      "interval": 12.0
+    },
+    {
+      "id": "smelter",
+      "displayName": "Smelter",
+      "icon": "🔥",
+      "resourceId": "iron_bars",
+      "baseRate": 1.0,
+      "scalingFactor": 1.3,
+      "interval": 15.0
+    },
+    {
+      "id": "blacksmith_worker",
+      "displayName": "Blacksmith",
+      "icon": "🔨",
+      "resourceId": "tools",
+      "baseRate": 1.0,
+      "scalingFactor": 1.2,
+      "interval": 20.0
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project:/Assets/Resources/UI/USS/ResourceNode.uss" />
+    <ui:VisualElement name="NodeContainer" class="resource-node">
+        <!-- Placeholder for Image or Icon -->
+        <ui:VisualElement name="Icon" class="node-icon" />
+        
+        <!-- Resource Label (e.g., Tree / Rock) -->
+        <ui:Label name="NodeLabel" text="RESOURCE" class="node-label" />
+        
+        <!-- Progress Bar Container -->
+        <ui:VisualElement name="ProgressContainer" class="progress-container">
+            <ui:VisualElement name="ProgressBarFill" class="progress-bar-fill" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

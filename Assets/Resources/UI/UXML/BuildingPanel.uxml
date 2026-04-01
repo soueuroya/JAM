@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project:/Assets/Resources/UI/USS/BuildingPanel.uss" />
+    <ui:VisualElement name="BuildingPanel" class="building-panel">
+        <!-- Title -->
+        <ui:Label name="BuildingTitle" text="BUILDING NAME" class="building-title" />
+
+        <!-- Input/Output Container -->
+        <ui:VisualElement name="IOContainer" class="io-container">
+            <ui:Label name="InputLabel" text="IN: 0" class="io-item" />
+            <ui:Label name="OutputLabel" text="OUT: 0" class="io-item" />
+        </ui:VisualElement>
+
+        <!-- Progress Bar -->
+        <ui:VisualElement name="ProgressContainer" class="progress-container">
+            <ui:VisualElement name="ProgressFill" class="progress-fill" />
+        </ui:VisualElement>
+
+        <!-- Start Button -->
+        <ui:Button name="StartButton" text="START PRODUCTION" class="start-button" />
+    </ui:VisualElement>
+</ui:UXML>

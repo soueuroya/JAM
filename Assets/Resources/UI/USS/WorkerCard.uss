@@ -1,0 +1,85 @@
+/* Worker Card */
+.worker-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #2e2e2e;
+    padding: 10px;
+    margin: 5px;
+    width: 130px;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.worker-card--hired {
+    border-color: #2e5e2e;
+    background-color: #1a231a;
+}
+
+.worker-icon {
+    font-size: 28px;
+    margin-bottom: 4px;
+    -unity-text-align: upper-center;
+}
+
+.worker-name {
+    font-size: 11px;
+    color: #cccccc;
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+    margin-bottom: 2px;
+}
+
+.worker-level {
+    font-size: 10px;
+    color: #888888;
+    -unity-text-align: upper-center;
+    margin-bottom: 6px;
+}
+
+.worker-tick-bar-bg {
+    width: 100%;
+    height: 4px;
+    background-color: #111111;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.worker-tick-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+}
+
+.worker-hire-btn {
+    width: 100%;
+    background-color: #1565c0;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 10px;
+    -unity-font-style: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-width: 0;
+}
+
+.worker-hire-btn:hover  { background-color: #1976d2; }
+.worker-hire-btn:active { background-color: #0d47a1; scale: 0.97 0.97; }
+
+.worker-upgrade-btn {
+    width: 100%;
+    background-color: #37474f;
+    border-radius: 5px;
+    color: #b0bec5;
+    font-size: 10px;
+    -unity-font-style: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-width: 0;
+    margin-top: 4px;
+}
+
+.worker-upgrade-btn:hover  { background-color: #455a64; }
+.worker-upgrade-btn:active { background-color: #263238; scale: 0.97 0.97; }

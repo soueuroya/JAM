@@ -1,0 +1,162 @@
+/* ── Card shell ─────────────────────────────────── */
+.game-row {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #2a2a2a;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 12px 14px;
+    flex-direction: column;
+    transition-property: background-color, border-color;
+    transition-duration: 0.1s;
+}
+
+.game-row--locked {
+    opacity: 0.65;
+}
+
+.game-row--collecting {
+    background-color: #0d2b10;
+}
+
+.game-row--complete {
+    border-color: #4CAF50;
+}
+
+/* ── Header ──────────────────────────────────────── */
+.game-row-header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.game-row-icon {
+    font-size: 24px;
+    width: 34px;
+    margin-right: 10px;
+    -unity-text-align: middle-center;
+}
+
+.game-row-info {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.game-row-title {
+    font-size: 13px;
+    color: #ffffff;
+    -unity-font-style: bold;
+}
+
+.game-row-sub {
+    font-size: 10px;
+    color: #777777;
+}
+
+/* ── Action button ───────────────────────────────── */
+.game-row-action-btn {
+    background-color: #1565c0;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 11px;
+    -unity-font-style: bold;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-width: 0;
+    min-width: 82px;
+    -unity-text-align: middle-center;
+}
+
+.game-row-action-btn:hover   { background-color: #1976d2; }
+.game-row-action-btn:active  { background-color: #0d47a1; }
+.game-row-action-btn:disabled { background-color: #1e1e1e; color: #555555; }
+
+/* Unlock state */
+.game-row--locked .game-row-action-btn {
+    background-color: #4a3010;
+    color: #ffa726;
+}
+
+/* ── Production bar ──────────────────────────────── */
+.game-row-prod-bar-bg {
+    height: 4px;
+    background-color: #111111;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.game-row-prod-bar-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #FF9800;
+}
+
+/* ── Divider ─────────────────────────────────────── */
+.game-row-divider {
+    height: 1px;
+    background-color: #2a2a2a;
+    margin-bottom: 8px;
+}
+
+/* ── Worker inline row ───────────────────────────── */
+.game-row-worker {
+    flex-direction: row;
+    align-items: center;
+}
+
+.game-row-worker-icon {
+    font-size: 15px;
+    width: 22px;
+    margin-right: 5px;
+    -unity-text-align: middle-center;
+}
+
+.game-row-worker-name {
+    font-size: 11px;
+    color: #999999;
+    margin-right: 6px;
+}
+
+.game-row-worker-level {
+    font-size: 10px;
+    color: #555555;
+}
+
+.game-row-worker-btn {
+    background-color: #1a3a5c;
+    border-radius: 5px;
+    color: #90caf9;
+    font-size: 10px;
+    -unity-font-style: bold;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-width: 0;
+    min-width: 58px;
+    -unity-text-align: middle-center;
+}
+
+.game-row-worker-btn:hover  { background-color: #1e4474; }
+.game-row-worker-btn--hired { background-color: #1a3a20; color: #81c784; }
+
+/* ── Worker tick bar ─────────────────────────────── */
+.game-row-tick-bar-bg {
+    height: 3px;
+    background-color: #111111;
+    border-radius: 1px;
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+.game-row-tick-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+}

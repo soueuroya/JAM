@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project:/Assets/Resources/UI/USS/ResourceNode.uss" />
+    <Style src="project:/Assets/Resources/UI/USS/Root.uss" />
+    <ui:VisualElement name="RootContainer" class="root-container">
+        <!-- Top Bar -->
+        <ui:VisualElement name="TopBar" class="top-bar">
+            <ui:Label name="ResourceLabel" text="RESOURCES" class="accent-green" />
+        </ui:VisualElement>
+
+        <!-- Center Area (Gameplay) -->
+        <ui:VisualElement name="CenterArea" class="center-area">
+            <ui:Label name="PlaceholderLabel" text="GAMEPLAY AREA" style="flex-grow: 1; -unity-text-align: middle-center; opacity: 0.5; font-size: 20px;" />
+        </ui:VisualElement>
+
+        <!-- Bottom Bar (Actions) -->
+        <ui:VisualElement name="BottomBar" class="bottom-bar">
+            <ui:Label name="ActionsLabel" text="ACTION BAR" class="accent-orange" />
+        </ui:VisualElement>
+
+        <!-- Overlay Layer for Popups -->
+        <ui:VisualElement name="OverlayLayer" class="overlay-layer" />
+    </ui:VisualElement>
+</ui:UXML>

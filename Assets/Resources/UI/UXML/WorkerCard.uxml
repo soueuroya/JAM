@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project:/Assets/Resources/UI/USS/WorkerCard.uss" />
+    <ui:VisualElement name="WorkerCard" class="worker-card">
+        <ui:Label name="WorkerIcon"  text="❓" class="worker-icon" />
+        <ui:Label name="WorkerName"  text="WORKER" class="worker-name" />
+        <ui:Label name="WorkerLevel" text="Not Hired" class="worker-level" />
+        <!-- Tick progress bar -->
+        <ui:VisualElement name="TickBarBg" class="worker-tick-bar-bg">
+            <ui:VisualElement name="TickFill" class="worker-tick-fill" />
+        </ui:VisualElement>
+        <!-- Hire button -->
+        <ui:Button name="HireBtn" text="HIRE" class="worker-hire-btn" />
+        <!-- Upgrade button (hidden until hired) -->
+        <ui:Button name="UpgradeBtn" text="UPGRADE" class="worker-upgrade-btn" />
+    </ui:VisualElement>
+</ui:UXML>

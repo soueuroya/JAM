@@ -1,0 +1,57 @@
+/* Resource Node - Valid Unity UI Toolkit USS */
+.resource-node {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a2a2a;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: #333333;
+    transition-property: scale, background-color, border-color;
+    transition-duration: 0.1s;
+}
+
+.resource-node:hover {
+    background-color: #323232;
+}
+
+/* :active pseudo-class — uses valid USS scale property */
+.resource-node:active {
+    background-color: #1a3d1a;
+    border-color: #66BB6A;
+    scale: 0.93 0.93;
+}
+
+.node-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    -unity-background-scale-mode: scale-to-fit;
+    border-radius: 10px;
+}
+
+.progress-container {
+    width: 80%;
+    height: 10px;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+    transition-property: width;
+    transition-duration: 0.08s;
+    transition-timing-function: ease-out;
+}
+
+.node-label {
+    font-size: 14px;
+    color: #e0e0e0;
+    -unity-font-style: bold;
+}

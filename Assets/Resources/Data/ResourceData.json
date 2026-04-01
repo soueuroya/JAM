@@ -1,0 +1,29 @@
+{
+  "resources": [
+    {
+      "id": "logs",
+      "displayName": "Raw Logs",
+      "category": "raw"
+    },
+    {
+      "id": "iron_ore",
+      "displayName": "Iron Ore",
+      "category": "raw"
+    },
+    {
+      "id": "planks",
+      "displayName": "Wooden Planks",
+      "category": "processed"
+    },
+    {
+      "id": "iron_bars",
+      "displayName": "Iron Bars",
+      "category": "processed"
+    },
+    {
+      "id": "tools",
+      "displayName": "Tools",
+      "category": "advanced"
+    }
+  ]
+}

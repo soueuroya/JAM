@@ -1,0 +1,75 @@
+/* Building Panel */
+.building-panel {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #333333;
+    padding: 10px;
+    margin: 4px;
+    width: 160px;
+    flex-direction: column;
+    flex-shrink: 1;
+}
+
+.building-title {
+    font-size: 12px;
+    -unity-font-style: bold;
+    color: #ffffff;
+    margin-bottom: 4px;
+    white-space: normal;
+    -unity-text-align: upper-center;
+}
+
+.io-container {
+    flex-direction: column;
+    margin-bottom: 4px;
+}
+
+.io-item {
+    font-size: 10px;
+    color: #aaaaaa;
+}
+
+.start-button {
+    background-color: #2e7d32;
+    border-radius: 6px;
+    color: #ffffff;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    -unity-font-style: bold;
+    border-width: 0;
+    font-size: 11px;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+}
+
+.start-button:hover {
+    background-color: #388e3c;
+}
+
+.start-button:active {
+    background-color: #1b5e20;
+    scale: 0.97 0.97;
+}
+
+.start-button:disabled {
+    background-color: #2a2a2a;
+    color: #555555;
+}
+
+.progress-container {
+    height: 6px;
+    background-color: #111111;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #FF9800;
+    transition-property: width;
+    transition-duration: 0.05s;
+}

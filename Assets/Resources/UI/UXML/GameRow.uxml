@@ -1,0 +1,38 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project:/Assets/Resources/UI/USS/GameRow.uss" />
+    <ui:VisualElement name="GameRow" class="game-row">
+
+        <!-- ── Header row ── -->
+        <ui:VisualElement class="game-row-header">
+            <ui:Label name="RowIcon" text="?" class="game-row-icon" />
+            <ui:VisualElement class="game-row-info">
+                <ui:Label name="RowTitle" text="TITLE"    class="game-row-title" />
+                <ui:Label name="RowSub"   text="subtitle" class="game-row-sub"   />
+            </ui:VisualElement>
+            <ui:Button name="ActionBtn" text="ACTION" class="game-row-action-btn" />
+        </ui:VisualElement>
+
+        <!-- ── Production progress bar (buildings only) ── -->
+        <ui:VisualElement name="ProdBarBg" class="game-row-prod-bar-bg">
+            <ui:VisualElement name="ProdBarFill" class="game-row-prod-bar-fill" />
+        </ui:VisualElement>
+
+        <!-- ── Divider ── -->
+        <ui:VisualElement class="game-row-divider" />
+
+        <!-- ── Embedded worker row ── -->
+        <ui:VisualElement class="game-row-worker">
+            <ui:Label name="WorkerIcon"  text="?"      class="game-row-worker-icon"  />
+            <ui:Label name="WorkerName"  text="Worker" class="game-row-worker-name"  />
+            <ui:Label name="WorkerLevel" text="—"      class="game-row-worker-level" />
+            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:Button name="WorkerBtn" text="HIRE" class="game-row-worker-btn" />
+        </ui:VisualElement>
+
+        <!-- ── Worker auto-tick bar ── -->
+        <ui:VisualElement name="TickBarBg" class="game-row-tick-bar-bg">
+            <ui:VisualElement name="TickFill" class="game-row-tick-fill" />
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

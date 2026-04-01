@@ -1,0 +1,38 @@
+{
+  "buildings": [
+    {
+      "id": "lumber_camp",
+      "input": {
+        "logs": 5.0
+      },
+      "output": {
+        "planks": 1.0
+      },
+      "duration": 8.0,
+      "type": "factory"
+    },
+    {
+      "id": "furnace",
+      "input": {
+        "iron_ore": 5.0
+      },
+      "output": {
+        "iron_bars": 1.0
+      },
+      "duration": 10.0,
+      "type": "factory"
+    },
+    {
+      "id": "blacksmith",
+      "input": {
+        "iron_bars": 2.0,
+        "logs": 1.0
+      },
+      "output": {
+        "tools": 1.0
+      },
+      "duration": 15.0,
+      "type": "factory"
+    }
+  ]
+}
